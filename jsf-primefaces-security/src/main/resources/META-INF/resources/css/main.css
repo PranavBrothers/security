@@ -1,0 +1,28 @@
+.authorization-div {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.logout-form {
+  margin-top: 20px;
+}
+
+body {
+  background-color: #0080c0;
+}
+
+h2 {
+  margin-bottom: 20px
+}
+
+.ui-widget-content {
+  background-color: #ff80ff;
+}
+
+.red {
+  color: #ff0000;
+}
+
+.center {
+  margin: 10 auto;
+}

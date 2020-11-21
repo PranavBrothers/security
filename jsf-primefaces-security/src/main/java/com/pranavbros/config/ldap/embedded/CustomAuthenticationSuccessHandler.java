@@ -9,7 +9,6 @@ import javax.servlet.http.HttpServletResponse;
 
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.GrantedAuthority;
-import org.springframework.security.core.userdetails.User;
 import org.springframework.security.ldap.userdetails.LdapUserDetails;
 import org.springframework.security.web.authentication.AuthenticationSuccessHandler;
 
@@ -29,9 +28,9 @@ public class CustomAuthenticationSuccessHandler implements AuthenticationSuccess
 			}
 		}
 		if (isAdmin) {
-			response.sendRedirect("/admin.xhtml");
+			response.sendRedirect("/pages/admin.xhtml");
 		} else {
-			response.sendRedirect("/user.xhtml");
+			response.sendRedirect("/pages/user.xhtml");
 		}
 	}
 

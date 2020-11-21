@@ -28,9 +28,9 @@ public class CustomAuthenticationSuccessHandler implements AuthenticationSuccess
 			}
 		}
 		if (isAdmin) {
-			response.sendRedirect("/admin.xhtml");
+			response.sendRedirect("/pages/admin.xhtml");
 		} else {
-			response.sendRedirect("/user.xhtml");
+			response.sendRedirect("/pages/user.xhtml");
 		}
 	}
 

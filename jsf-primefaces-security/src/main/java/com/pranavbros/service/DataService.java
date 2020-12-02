@@ -1,8 +1,15 @@
 package com.pranavbros.service;
 
-import org.springframework.stereotype.Service;
 import java.util.LinkedHashMap;
+import java.util.List;
 import java.util.Map;
+
+import org.hibernate.Session;
+import org.hibernate.Transaction;
+import org.springframework.stereotype.Service;
+
+import com.pranavbros.model.jpa.Employee;
+import com.pranavbros.util.HibernateUtil;
 
 @Service
 public class DataService {
@@ -16,5 +23,22 @@ public class DataService {
         map.put(5, 300.4);
         map.put(6, 630.0);
        return map;
+    }
+    
+    public void saveEmployee(Employee e) {
+    	Transaction transaction = null;
+    	try(Session session = HibernateUtil.getSessionFactory().openSession()){
+    		transaction = session.beginTransaction();
+    		session.save(e);
+    		transaction.commit();
+    	}
+    }
+    
+    public List<Employee> getEmployees(){
+    	List<Employee> employees = null;
+    	try(Session session = HibernateUtil.getSessionFactory().openSession()){
+    		employees = session.createQuery("from Employee", Employee.class).list();
+    	}
+    	return employees;
     }
 }

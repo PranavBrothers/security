@@ -1,20 +1,24 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<faces-config xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+<?xml version="1.0" encoding='UTF-8'?>
+<faces-config version="2.2" xmlns="http://xmlns.jcp.org/xml/ns/javaee"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee/web-facesconfig_2_2.xsd"
-	version="2.2">
+	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee 
+ http://xmlns.jcp.org/xml/ns/javaee/web-facesconfig_2_2.xsd">
 
 	<application>
 		<el-resolver>org.springframework.web.jsf.el.SpringBeanFacesELResolver
 		</el-resolver>
 	</application>
+	<lifecycle>
+		<phase-listener>org.springframework.web.jsf.DelegatingPhaseListenerMulticaster</phase-listener>
+	</lifecycle>
 	
 	<navigation-rule>
-		<from-view-id>pages/add-car.xhtml</from-view-id>
+		<description>Navigate from Add Car Page</description>
+		<from-view-id>menu.xhtml</from-view-id>
 		<navigation-case>
-			<from-action>#{car.view}</from-action>
-			<from-outcome>form</from-outcome>
-			<to-view-id>pages/viewdetails.xhtml</to-view-id>
+			<from-action>#{car.xmlNav}</from-action>
+			<from-outcome>success</from-outcome>
+			<to-view-id>pagenav.xhtml</to-view-id>
 		</navigation-case>
 	</navigation-rule>
 

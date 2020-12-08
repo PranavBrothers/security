@@ -71,12 +71,20 @@ public class Car implements Serializable {
 		this.Id = Id;
 	}
 
-	public String add() {
+	public String directFolder() {
 		return "pagenav";
+	}
+	
+	public String xmlNav() {
+		return "success";
+	}
+	
+	public String nestedFolder() {//Not Working
+		return "pages/pagenav";
 	}
 
 	public String view() {
-		return "form";
+		return "success";
 	}
 
 }

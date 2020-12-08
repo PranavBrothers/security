@@ -11,7 +11,7 @@ public class NavigationConfig implements WebMvcConfigurer {
 
   @Override
   public void addViewControllers(ViewControllerRegistry registry) {
-    registry.addViewController("/").setViewName("forward:/index.xhtml");
+    registry.addViewController("/").setViewName("forward:/index.jsf");
     registry.setOrder(Ordered.HIGHEST_PRECEDENCE);
   }
   

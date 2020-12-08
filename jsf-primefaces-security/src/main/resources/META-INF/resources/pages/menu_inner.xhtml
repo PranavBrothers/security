@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:sec="http://www.springframework.org/security/tags">
+	
+<h:head>
+	<title>Page Navigation</title>
+</h:head>
+<h:body>
+	<h3>Page Navigation using Managed Bean</h3>
+	<h:form>
+		<h:commandButton action="/pages/pagenav.xhtml" value="Implicit Navigation" />
+		
+		<h:commandButton action="#{car.directFolder}" value="Page Navigation using Managed Bean Direct Folder" />
+		
+		<h:commandButton action="#{car.nestedFolder}" value="Page Navigation using Managed Bean Nested Folder" />
+		
+		<h:commandButton action="#{car.xmlNav}" value="Page Navigation using Managed Bean and XML" />
+		
+		<h:commandButton action="#{car.view}" value="View Car Details" />
+	</h:form>
+</h:body>
+</html>

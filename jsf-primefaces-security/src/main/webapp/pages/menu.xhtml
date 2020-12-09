@@ -11,15 +11,12 @@
 <h:body>
 	<h3>Page Navigation using Managed Bean</h3>
 	<h:form>
-		<h:commandButton action="/pages/pagenav.xhtml" value="Implicit Navigation" />
+		<h:commandButton action="/pages/car/add.xhtml" value="Implicit Navigation" />
 		
-		<h:commandButton action="#{car.directFolder}" value="Page Navigation using Managed Bean Direct Folder" />
-		
-		<h:commandButton action="#{car.nestedFolder}" value="Page Navigation using Managed Bean Nested Folder" />
+		<h:commandButton action="/pages/car/view.xhtml" value="View Car Details" />
 		
 		<h:commandButton action="#{car.xmlNav}" value="Page Navigation using Managed Bean and XML" />
 		
-		<h:commandButton action="#{car.view}" value="View Car Details" />
 	</h:form>
 </h:body>
 </html>

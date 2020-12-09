@@ -1,10 +1,13 @@
 package com.pranavbros.model;
 
-import javax.inject.Named;
+import javax.annotation.ManagedBean;
+import javax.faces.bean.ViewScoped;
+
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 
-@Named
+@ManagedBean
+@ViewScoped
 public class UserBean {
 
   private String firstName = "";

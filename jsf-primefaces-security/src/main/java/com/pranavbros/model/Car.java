@@ -3,11 +3,12 @@ package com.pranavbros.model;
 
 import java.io.Serializable;
 
-import javax.enterprise.context.SessionScoped;
-import javax.inject.Named;
+import javax.annotation.ManagedBean;
+import javax.faces.bean.SessionScoped;
 
 
-@Named
+@ManagedBean
+//@ViewScoped
 @SessionScoped
 public class Car implements Serializable {
 

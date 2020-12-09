@@ -1,20 +1,19 @@
 package com.pranavbros.service;
 
+import javax.annotation.ManagedBean;
 import javax.annotation.PostConstruct;
-import javax.enterprise.context.SessionScoped;
-import javax.inject.Named;
+import javax.faces.bean.SessionScoped;
 
 import org.primefaces.model.chart.Axis;
 import org.primefaces.model.chart.AxisType;
 import org.primefaces.model.chart.LineChartModel;
 import org.primefaces.model.chart.LineChartSeries;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
 
-@Component
-@Named
+@ManagedBean
 @SessionScoped
 public class LineChartBean {
+	
     @Autowired
     private DataService dataService;
     private LineChartModel lineModel;

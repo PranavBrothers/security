@@ -32,9 +32,9 @@ public class CustomAuthenticationSuccessHandler implements AuthenticationSuccess
 		//response.sendRedirect("/index.jsp");
 		
 		if (isAdmin) {
-			response.sendRedirect("/pages/admin.xhtml");
+			response.sendRedirect("/pages/role/admin.xhtml");
 		} else {
-			response.sendRedirect("/user.xhtml");
+			response.sendRedirect("/pages/role/user.xhtml");
 		}
 	}
 
